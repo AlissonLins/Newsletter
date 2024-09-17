@@ -1,38 +1,174 @@
-.App {
-  text-align: center;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    font-family: 'Roboto', "Sans-serif";
+    margin: 50px;
+    background-color: #2B2D42;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container {
+    display: flex;
+    width: 800px;
+    background-color: white;
+    border-radius: 20px;
+    padding: 30px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.conteudo-esquerda {
+    max-width: 60%;
 }
 
-.App-link {
-  color: #61dafb;
+.cabecalho-principal {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #2B2D42;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.conteudo-principal {
+    margin-bottom: 1.5rem;
+    color: #2B2D42;
+}
+
+.icon-list {
+    list-style: none;
+    margin-bottom: 2rem;
+}
+
+.icon-list li {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    color: #2B2D42;
+}
+
+.icon-list li img {
+    margin-right: 0.5rem;
+}
+
+.email-box {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #2B2D42;
+}
+
+input[type="email"]{
+    border-radius: 10px;
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    width: 300px;
+    margin-bottom: 1rem;
+    
+}
+
+.botao-principal {
+    margin-top: 20px;
+    padding: 15px 20px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(90deg, #FF6B6B, #FF8C42);
+}
+
+.botao-principal:hover {
+    background: linear-gradient(90deg, #FF8C42, #FF6B6B);
+}
+
+.img-direita {
+    width: 40%;
+}
+
+.img-direita img {
+   width: 100%;
+   border-radius: 10px;
+}
+
+.success-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.sucess-conteudo {
+    background-color: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px;
+    text-align: center;
+    max-width: 400px;
+}
+
+.success-icon {
+    width: 50px;
+    margin-bottom: 1.5rem;
+}
+
+.success-header {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #2B2D42;
+}
+
+.success-text {
+    font-size: 1rem;
+    color: #6B7280;
+    margin-bottom: 2rem;
+}
+
+.success-button {
+    background-color: #2B2D42;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.success-button:hover {
+    background: linear-gradient(90deg, #FF6B6B, #FF8C42);
+}
+
+@media (max-width:768px) {
+    .container {
+        flex-direction: column-reverse;
+        width: 95%;
+        padding: 0;
+    }
+    body {
+        padding: 0;
+        margin: 0;
+    }
+    .container h1 {
+        font-size: 30px;
+    }
+    .conteudo-esquerda {
+        max-width: 100%;
+        padding: 20px;
+    }
+    .img-direita {
+        width: 100%;
+    }
+    .img-direita img {
+        content: url("./images/illustration-sign-up-mobile.svg");
+    }
+    form {
+        width: 90%;
+    }
+    .sucess-conteudo {
+        min-height: 100vh;
+    }
 }
